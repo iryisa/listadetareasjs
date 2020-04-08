@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTA DE TAREAS</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="card">
+        <div class="card__left">
+
+            <form id="form" action="#" method="GET" autocomplete="off">
+
+                <ul class="list-unstyled components" id="filtrosBusqueda">
+                    <h2>LISTA DE TAREAS</h3>
+
+                        <p>Buscar por nombre</p>
+                        <li>
+                            <input class="form-control" type="text" id="search" placeholder="Buscar Tarea">
+                        </li>
+
+
+                        <p>Selecciona tareas</p>
+                        <li>
+                            <select class="form-control" id="nombre">
+                                <option value="" selected>Selecciona nombre </option>
+                                <option value="estudiar">Estudiar</option>
+                                <option value="comer">comer</option>
+                                <option value="correr">Correr</option>
+                                <option value="pasear">Pasear</option>
+                            </select>
+                        </li>
+                        <p>Selecciona prioridad</p>
+                        <li>
+                            <select class="form-control" id="prioridad">
+                                <option value="" selected>Selecciona prioridad </option>
+                                <option value="urgente">Urgente</option>
+                                <option value="normal">Normal</option>
+                                <option value="baja">Baja</option>
+                                <option value="opcional">Opcional</option>
+                            </select>
+
+                        </li>
+                        <p>Selecciona frecuencia</p>
+                        <li>
+                            <select name="frecuencia" id="frecuencia">
+                                <option value="" selected>Selecciona frecuencia </option>
+                                <option value="diaria">Diaria</option>
+                                <option value="semanal">Semanal</option>
+                                <option value="mensual">Mensual</option>
+                                <option value="trimestral">Trimestral</option>
+                                <option value="anual">Anual</option>
+
+                            </select>
+
+                            <input type="button" id="btnBuscar" value="Buscar tareas">
+                        </li>
+
+                        <p>Filtro combinado</p>
+
+                        <li>
+                            <select class="form-control" id="nombreCombinado">
+                                <option value="" selected>Selecciona nombre </option>
+                                <option value="estudiar">Estudiar</option>
+                                <option value="comer">comer</option>
+                                <option value="correr">Correr</option>
+                                <option value="pasear">Pasear</option>
+                            </select>
+
+                            <select name="prioridad" id="prioridadCombinado">
+                                <option value="" selected>Selecciona prioridad </option>
+                                <option value="urgente">Urgente</option>
+                                <option value="normal">Normal</option>
+                                <option value="baja">Baja</option>
+                                <option value="opcional">Opcional</option>
+
+                            </select>
+
+                            <select name="frecuencia" id="frecuenciaCombinado">
+                                <option value="" selected>Selecciona frecuencia </option>
+                                <option value="diaria">Diaria</option>
+                                <option value="semanal">Semanal</option>
+                                <option value="mensual">Mensual</option>
+                                <option value="trimestral">Trimestral</option>
+                                <option value="anual">Anual</option>
+
+                            </select>
+
+                            <input type="submit" id="btnBuscarCombinado" value="Buscar">
+                            <script>
+
+                            </script>
+                        </li>
+                </ul>
+
+            </form>
+        </div>
+
+        <div class="card__right">
+
+            <form id="tareaForm" action="#" method="GET" autocomplete="off">
+
+                <ul>
+                    <p>Introduce nombre tarea</p>
+                    <label>
+
+                        <input type="text" id="nombreNuevo" placeholder="Introduce nombre tarea">
+                    </label>
+                    <p>Introduce prioridad</p>
+
+                    <select name="prioridad" id="prioridadNuevo">
+                        <option value="">Selecciona una prioridad</option>
+                        <option value="urgente">Urgente</option>
+                        <option value="normal">Normal</option>
+                        <option value="baja">Baja</option>
+                        <option value="opcional">Opcional</option>
+
+                    </select>
+                    <p>Introduce frecuencia</p>
+                    <select name="frecuencia" id="frecuenciaNuevo">
+                        <option value="">Selecciona frecuencia tarea</option>
+                        <option value="diaria">Diaria</option>
+                        <option value="semanal">Semanal</option>
+                        <option value="mensual">Mensual</option>
+                        <option value="trimestral">Trimestral</option>
+                        <option value="anual">Anual</option>
+
+                    </select>
+
+
+                    <input id="btnNuevaTarea" type="submit" value="Guardar">
+
+                    <div id="mensajeError"></div>
+                    <p id="mensaje"></p>
+
+                </ul>
+
+            </form>
+
+        </div>
+        <div id="content" class="card_content">
+
+
+            <section id="listaTareas">
+
+            </section>
+        </div>
+    </div>
+    <script src="js/eventos1.js"></script>
+    <script src="js/modelo.js"></script>
+</body>
+
+</html>
